@@ -119,5 +119,5 @@ ActiveRecord::Schema.define(version: 2021_07_27_161112) do
     t.integer "order_status", null: false
     t.index ["customer_id"], name: "index_orders_on_customer_id"
   end
-
+  
 end
