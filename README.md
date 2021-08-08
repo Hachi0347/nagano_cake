@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-*Then Hey,look. Here's a new guy. 
+* Then Hey,look. Here's a new guy. 

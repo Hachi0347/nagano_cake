@@ -65,3 +65,6 @@ gem 'devise'
 gem 'bootstrap', '~> 5.0.0.beta1'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
+gem 'bootstrap', '~> 5.0.0.beta1'
+gem 'jquery-rails'
+gem 'font-awesome-sass', '~> 5.13'

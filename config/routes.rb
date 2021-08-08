@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  namespace :public do
-    get 'address/index'
-    get 'address/edit'
-  end
-  devise_for :admin
-  devise_for :customers
+  devise_for :admin, controllers: {
+    sessions:      'admin/sessions',
+    passwords:     'admin/passwords',
+    registrations: 'admin/registrations'
+  }
+  devise_for :customers, controllers: {
+    sessions:      'customers/sessions',
+    passwords:     'customers/passwords',
+    registrations: 'customers/registrations'
+  }
   scope module: :public do
     root 'homes#top'
     get 'homes/top'
