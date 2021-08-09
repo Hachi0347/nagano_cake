@@ -18,6 +18,7 @@
   <div class="inner">
   　<h2 class="customer-login-label">ログイン</h2>
   　   <div class="input-field">
+  　     <h5 class="login-label">会員の方はこちらからログイン</h5>
   　     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field-email">
           <%= f.label :email %>
@@ -29,11 +30,10 @@
           <%= f.password_field :password, autocomplete: "current-password" %>
         </div>
       
-        <div class="actions">
-          <%= f.submit "ログイン" %>
-        </div>
+        <%= f.submit "ログイン", class: "btn btn-primary actions" %>
         <% end %>
-        <%= render "devise/shared/links" %>
+        <h5 class="login-label">会員登録がお済みでない方</h5><br>
+        <%= link_to "こちら", new_customer_registration_path %>から新規登録を行ってください。
       </div>
     </div>
   </div>
