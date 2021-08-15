@@ -18,22 +18,22 @@
   <div class="inner">
   　<h2 class="customer-login-label">ログイン</h2>
   　   <div class="input-field">
-  　     <h5 class="login-label">会員の方はこちらからログイン</h5>
+  　     <h5 class="login-label-a">会員の方はこちらからログイン</h5>
   　     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field-email">
-          <%= f.label :email %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <%= f.label :email, "メールアドレス", class: "field-email-label" %>
+          <%= f.email_field :email, autofocus: true, placeholder: "sample@example.com", class: "form-group mb-2 w-50" %>
         </div>
       
         <div class="field-password">
-          <%= f.label :password %>
-          <%= f.password_field :password, autocomplete: "current-password" %>
+          <%= f.label :password, "パスワード", class: "field-password-label" %>
+          <%= f.password_field :password, autocomplete: "current-password", class: "form-group mb-2 w-50" %>
         </div>
       
-        <%= f.submit "ログイン", class: "btn btn-primary actions" %>
+        <%= f.submit "ログイン", class: "btn btn-primary actions d-grid gap-2 col-4 mx-auto" %>
         <% end %>
-        <h5 class="login-label">会員登録がお済みでない方</h5><br>
-        <%= link_to "こちら", new_customer_registration_path %>から新規登録を行ってください。
+        <h5 class="login-label-b">会員登録がお済みでない方</h5><br>
+        <%= link_to "こちら", new_customer_registration_path %>　から新規登録を行ってください。
       </div>
     </div>
   </div>
