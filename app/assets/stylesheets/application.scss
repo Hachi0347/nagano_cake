@@ -118,7 +118,8 @@
  text-align: center;
  width: 240px;
  margin-left: 60px;
- margin-top: 50px;
+ margin-top: 30px;
+ margin-bottom: 30px;
 }
 
 .registration-inner {
@@ -146,4 +147,56 @@
 
 .registration-first-name-text_field {
  margin-right: 30px;
+}
+
+.label-registration-last-name {
+ margin-right: 17px;
+}
+
+.label-registration-name_kana {
+ margin-right: 133px;
+}
+
+.registration-first-name-kana-label {
+ margin-right: 5px;
+}
+
+.label-registration-email {
+ margin-right: 140px;
+}
+
+.label-registration-postal_code {
+ margin-right: 78px;
+}
+
+.label-registration-address {
+ margin-right: 217px;
+}
+
+.label-registration-telephone_number {
+ margin-right: 78px;
+}
+
+.registration-password-text_field {
+ margin-left: 80px;
+}
+
+.label-registration-password_confirmation {
+ margin-right: 110px;
+}
+
+.registration-actions {
+ margin-top: 30px;
+ margin-left: 253px;
+}
+
+.link-customer_session_path {
+ margin-left: 120px;
+}
+
+// customer-about-page css
+
+.label-about {
+ margin-top: 60px;
+ margin-bottom: 60px;
 }

@@ -24,35 +24,35 @@
         <label for="name", class="label-registration-name">名前</label>
         <%= f.label :first_name, "(姓)", class: "registration-first-name-label" %>
         <%= f.text_field :first_name, autofocus: true, placeholder: "令和", class: "registration-first-name-text_field rounded w-25" %>
-        <%= f.label :last_name, "(名)" %>
-        <%= f.text_field :last_name, placeholder: "花子", class: "registration-first-name-text_field rounded w-25" %>
+        <%= f.label :last_name, "(名)", class: "label-registration-last-name" %>
+        <%= f.text_field :last_name, placeholder: "花子", class: "registration-last-name-text_field rounded w-25" %>
       </div>
       
       <div class="field-registration">
-        <label for="name_kana", class="name_kana">フリガナ</label>
-        <%= f.label :first_name_kana, "(セイ)" %>
+        <label for="name_kana", class="label-registration-name_kana">フリガナ</label>
+        <%= f.label :first_name_kana, "(セイ)", class: "registration-first-name-kana-label" %>
         <%= f.text_field :first_name_kana, placeholder: "レイワ", class: "registration-first-name-text_field rounded w-25" %>
         <%= f.label :last_name_kana, "(メイ)" %>
         <%= f.text_field :last_name_kana, placeholder: "ハナコ", class: "registration-first-name-text_field rounded w-25" %>
       </div>
       
       <div class="field-registration">
-        <%= f.label :email, "メールアドレス" %>
-        <%= f.email_field :email, placeholder: "sample@example.com", class: "registration-first-name-text_field rounded w-25" %>
+        <%= f.label :email, "メールアドレス", class: "label-registration-email" %>
+        <%= f.email_field :email, placeholder: "sample@example.com", class: "registration-email-text_field rounded w-25" %>
       </div>
       
       <div class="field-registration">
-        <%= f.label :postal_code, "郵便番号(ハイフンなし)" %>
-        <%= f.text_field :email, placeholder: "0000000", class: "registration-first-name-text_field rounded w-25" %>
+        <%= f.label :postal_code, "郵便番号(ハイフンなし)", class: "label-registration-postal_code" %>
+        <%= f.text_field :postal_code, placeholder: "0000000", class: "registration-first-name-text_field rounded w-25" %>
       </div>
       
       <div class="field-registration">
-        <%= f.label :address, "住所" %>
+        <%= f.label :address, "住所", class: "label-registration-address" %>
         <%= f.text_field :address, placeholder: "東京都渋谷区代々木神園町0-0", class: "registration-first-name-text_field rounded w-25" %>
       </div>
       
       <div class="field-registration">
-        <%= f.label :telephone_number, "電話番号(ハイフンなし)" %>
+        <%= f.label :telephone_number, "電話番号(ハイフンなし)", class: "label-registration-telephone_number" %>
         <%= f.text_field :telephone_number, placeholder: "00000000000", class: "registration-first-name-text_field rounded w-25" %>
       </div>
     
@@ -61,20 +61,20 @@
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %>文字以上)</em>
         <% end %>
-        <%= f.password_field :password, autocomplete: "new-password", class: "registration-first-name-text_field rounded w-25" %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "registration-password-text_field rounded w-25" %>
       </div>
     
       <div class="field-registration">
-        <%= f.label :password_confirmation, "パスワード(確認用)" %>
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "registration-first-name-text_field rounded w-25" %>
+        <%= f.label :password_confirmation, "パスワード(確認用)", class: "label-registration-password_confirmation" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "rounded w-25" %>
       </div>
     
-      <div class="actions">
-        <%= f.submit "新規登録", class: "btn btn-success" %>
+      <div class="registration-actions">
+        <%= f.submit "新規登録", class: "btn btn-success w-25" %>
       </div>
     <% end %>
     
     <h4 class="registration-label-b">既に登録済みの方</h4>
-    <%= link_to "こちら", customer_session_path %>　からログインしてください。
+    <%= link_to "こちら", customer_session_path, class: "link-customer_session_path" %>　からログインしてください。
   </div>
 </div>
