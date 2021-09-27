@@ -5,12 +5,12 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.string :shipping_customer_name
       t.string :shipping_postal_code
       t.string :shipping_address
-      t.integer :payment_method
+      t.integer :payment_method, default: 0
       t.integer :billing_amount
       t.integer :shipping_fee
-      t.datetime :created_at
-      t.datetime :updated_at
-      t.integer :order_status
+      t.datetime :created_at, default: -> { 'NOW()' }
+      t.datetime :updated_at, default: -> { 'NOW()' }
+      t.integer :order_status, default: 0
 
       t.timestamps
     end

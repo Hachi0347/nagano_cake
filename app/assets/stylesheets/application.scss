@@ -197,6 +197,42 @@
 // customer-about-page css
 
 .label-about {
- margin-top: 60px;
- margin-bottom: 60px;
+ margin-top: 30px;
+ margin-bottom: 30px;
+}
+
+.about-picture {
+ width: 60%;
+ height: auto;
+}
+
+
+// customer-top-page css
+
+.top-picture-and-discription {
+ position: relative;
+ width: 600px;
+ height: 400px;
+}
+
+.top-picture {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 600px;
+ height: auto;
+}
+
+.top-discription {
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.top-new-items-label {
+ 
+}
+
+.top-link-to-all-items {
+ 
 }

@@ -5,9 +5,9 @@ class CreateOrderDetails < ActiveRecord::Migration[5.2]
       t.references :item
       t.integer :price
       t.integer :amount
-      t.integer :production_status
-      t.datetime :created_at
-      t.datetime :updated_at
+      t.integer :production_status, default: 0
+      t.datetime :created_at, default: -> { 'NOW()' }
+      t.datetime :updated_at, default: -> { 'NOW()' }
 
       t.timestamps
     end

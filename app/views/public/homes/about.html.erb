@@ -1,19 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <%= link_to "Nagano Cake", root_path, class: "navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <%= link_to "About", homes_about_path, class: "nav-link active" %>
-        <%= link_to "商品一覧", items_path, class: 'nav-link' %>
-        <%= link_to "新規登録", new_customer_registration_path, class: 'nav-link' %>
-        <%= link_to "ログイン", customer_session_path, class: 'nav-link' %>
-      </div>
-    </div>
-  </div>
-</nav>
+<%= render 'admin/shared/navbar' %>
 <div class="parent">
     <h1 class="label-about">About</h1>
     <h4>ながのCAKE全国発送可能なケーキ屋さんです。</h4>
@@ -22,6 +7,6 @@
     <h4>また、全国へ発送可能ですので「いつ」でも「どこ」でもご注文いただけます。</h4>
     <h4>ぜひご注文ください。</h4>
     <div>
-     <img class="about-picture", src="/assets/no_image.jpg">
+     <img class="about-picture", src="/assets/752d1d_654df0b48121490b9c814060afb1b335_mv2.webp">
     </div>
 </div>

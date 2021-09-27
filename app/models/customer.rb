@@ -4,7 +4,7 @@ class Customer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
-  has_many :address #追記
-  has_many :cart_item #追記
-  has_many :order #追記
+  has_many :addresses #追記
+  has_many :cart_items #追記
+  has_many :orders #追記
 end

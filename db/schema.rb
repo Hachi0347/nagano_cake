@@ -22,18 +22,6 @@ ActiveRecord::Schema.define(version: 2021_07_27_161112) do
     t.index ["customer_id"], name: "index_addresses_on_customer_id"
   end
 
-  create_table "admin", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_admin_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_admin_on_reset_password_token", unique: true
-  end
-
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -69,7 +57,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_161112) do
     t.string "postal_code", null: false
     t.string "address", null: false
     t.string "telephone_number", null: false
-    t.boolean "is_active", null: false
+    t.boolean "is_active", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_customers_on_email", unique: true
@@ -88,7 +76,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_161112) do
     t.string "image_id", null: false
     t.text "introduction", null: false
     t.integer "price", null: false
-    t.boolean "is_active", null: false
+    t.boolean "is_active", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["genre_id"], name: "index_items_on_genre_id"
@@ -99,7 +87,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_161112) do
     t.integer "item_id", null: false
     t.integer "price", null: false
     t.integer "amount", null: false
-    t.integer "production_status", null: false
+    t.integer "production_status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_order_details_on_item_id"
@@ -111,12 +99,12 @@ ActiveRecord::Schema.define(version: 2021_07_27_161112) do
     t.string "shipping_customer_name", null: false
     t.string "shipping_postal_code", null: false
     t.string "shipping_address", null: false
-    t.integer "payment_method", null: false
+    t.integer "payment_method", default: 0, null: false
     t.integer "billing_amount", null: false
     t.integer "shipping_fee", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "order_status", null: false
+    t.integer "order_status", default: 0, null: false
     t.index ["customer_id"], name: "index_orders_on_customer_id"
   end
 
